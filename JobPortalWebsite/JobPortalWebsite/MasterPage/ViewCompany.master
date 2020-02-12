@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MasterPageForViewer.master" AutoEventWireup="true" CodeFile="ViewCompany.master.cs" Inherits="MasterPages_ViewCompany" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder runat="server" ID="Head">
+      
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="row PageHeadingRow">
+        <div class="col-xs-12">
+            <span class="h3"><asp:Label runat="server" ID="LblCompanyName"></asp:Label></span>
+            <span class="pull-right">
+            <asp:HyperLink runat="server" ID="LnkListOfContacts" NavigateUrl="~/Company/CompanyList.aspx">Back to the List of Companies</asp:HyperLink>
+                </span>
+        </div>
+    </div>
+    <br />
+    <ul class="nav nav-tabs">
+    <li runat="server" id="LICompanyDetails"><asp:HyperLink runat="server" ID="LnkGeneralDetails" ForeColor="#000099" NavigateUrl="~/Company/ViewCompany.aspx">Company General Information</asp:HyperLink></li>
+        <li runat="server" id="LIBranchDetails"><asp:HyperLink runat="server" ID="LnkVendorshipDetails" ForeColor="#000099" navigateurl="~/Company/ViewBranchDetails.aspx">Branch List</asp:HyperLink></li>
+        <li runat="server" id="LIHiringManager"><asp:HyperLink runat="server" ID="LnkHiringManager" ForeColor="#000099" navigateurl="~/Company/ViewHiringManager.aspx">Hiring Manager</asp:HyperLink></li>
+        <li runat="server" id="LIJobPost"><asp:HyperLink runat="server" ID="LnkJobPost" ForeColor="#000099" navigateurl="~/Company/ViewHiringManager.aspx">Job Posts</asp:HyperLink></li>
+        <li runat="server" id="LIQuestionAnswer"><asp:HyperLink runat="server" ID="LnkQuestionAnswer" ForeColor="#000099" navigateurl="~/Company/ViewQuestionAnswer.aspx">Questions</asp:HyperLink></li>
+        
+ </ul>
+    <div class="row InformationPanel"><div class="col-xs-12">
+    <asp:ContentPlaceHolder ID="Body" runat="server"></asp:ContentPlaceHolder>
+        </div></div>
+</asp:Content>
+

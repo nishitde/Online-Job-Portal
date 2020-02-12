@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MasterPageForViewer.master" AutoEventWireup="true" CodeFile="ViewJobPost.master.cs" Inherits="MasterPage_ViewJobPost" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <div class="row">
+        <div class="col-xs-12">
+            <span class="h3" style="color:#344154;text-transform:uppercase">View Job Details</span>
+            <span class="pull-right">
+            <asp:HyperLink runat="server" CssClass="btn btn-info" ID="LnkListOfContacts" NavigateUrl="~/JobPost/JobPostList.aspx">Back to the List of Job Posts</asp:HyperLink>
+                </span>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-6 col-sm-1">
+            <asp:Button runat="server" Text="Apply" CssClass="btn btn-primary" id="BtnApply" OnClick="BtnApply_Click" />
+        </div>
+        <div class="col-xs-6 col-sm-1">
+            <asp:Button runat="server" ID="BtnSave" CssClass="btn btn-success" Text="Save" OnClick="BtnSave_Click" />
+        </div>
+    </div>
+    <br />
+    <div class="row text-center">
+        <span class="h4"><asp:Label runat="server" ID="LblMessage" Visible="true"></asp:Label></span>
+    </div>
+    <br />
+    <ul class="nav nav-tabs">
+        <li runat="server" id="LIJobDescription"><asp:HyperLink runat="server" Font-Size="Large" ID="LnkJobDescription" ForeColor="#000099" navigateurl="~/JobPost/ViewJobDescription.aspx">Job Description</asp:HyperLink></li>
+        <li runat="server" id="LIJobRequirement"><asp:HyperLink runat="server" Font-Size="Large" ID="LnkJobRequirement" ForeColor="#000099" navigateurl="~/JobPost/ViewRequirements.aspx">Job Requirements</asp:HyperLink></li>
+        <li runat="server" id="LIInterviewProcess"><asp:HyperLink runat="server" Font-Size="Large" ID="LnkInterviewProcess" ForeColor="#000099" navigateurl="~/JobPost/ViewInterviewProcess.aspx">Interview Process</asp:HyperLink></li>
+        <li runat="server" id="LIQuestionJobPost"><asp:HyperLink runat="server" Font-Size="Large" ID="LnkQuestionJobPost" ForeColor="#000099" navigateurl="~/JobPost/ViewQuestionJobPost.aspx">Question Answer</asp:HyperLink></li>
+ </ul>
+    <div class="row InformationPanel" style="background-color:white!important"><div class="col-xs-12">
+    <asp:ContentPlaceHolder ID="Body" runat="server"></asp:ContentPlaceHolder>
+        </div></div>
+</asp:Content>
